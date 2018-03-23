@@ -23,7 +23,7 @@ public class WorkoutTransactionService {
 		return workoutTransactions;
 	}
 	
-	@Cacheable(value = "transactions")
+	//@Cacheable(value = "transactions")
 	public List<WorkOutTransactions> getWorkoutTxnDetails(Long workoutId) {
 		System.out.println("getWorkoutTxnDetails"+workoutId);
 		List<WorkOutTransactions> workoutTxnList=workoutTransactionRepo.findByWorkId(workoutId);
